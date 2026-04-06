@@ -29,6 +29,17 @@ export class AuthService implements HttpInterceptor {
     console.log(req.headers.get("Authorization"))
     return next.handle(req).pipe(
       catchError((error: HttpErrorResponse) => {
+
+
+        if (error.status === 0) {
+
+          console.log("Server not reachable");
+
+          this.router.navigate([this.router.url], {
+            queryParams: { errorMessage: ".Server not reachable. Please start backend" }
+          });
+
+        }
         if (error.status === 401) {
           localStorage.clear();
           this.router.navigate(['/login'], {
