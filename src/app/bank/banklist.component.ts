@@ -14,4 +14,4 @@ constructor(public locator: ServiceLocatorService,route: ActivatedRoute){
       super(locator.endpoints.BANK,locator,route);
     }
 
-}
+}  

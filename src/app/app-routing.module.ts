@@ -366,7 +366,7 @@ const routes: Routes = [
     path: 'bank',
     component: BankComponent
   },
-
+  
   {
     path: 'banklist',
     component: BanklistComponent

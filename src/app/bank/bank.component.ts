@@ -15,3 +15,4 @@ export class BankComponent extends BaseCtl {
       super(locator.endpoints.BANK,locator,route);
     }
 }
+  
